@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stall</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&display=swap');
+
+    * {
+        /* background-color: #c72222; */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        font-family: "Poppins";
+        background-color: #009990;
+
+    }
+
+
+
+    .card {
+        min-width: 30vw;
+        height: 160px;
+        background-color: azure;
+        position: relative;
+        border: 0.9vw solid white;
+
+    }
+
+    .card>.textContainer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .listOfCards {
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        gap: 2vw;
+        padding: 20px;
+        flex-wrap: wrap;
+
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .headerContainer {
+        display: flex;
+        justify-content: center;
+        color: white;
+        height: 20vh;
+        width: 100vw;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .headerContainer>img {
+        height: 100%;
+        width: auto;
+    }
+
+    .card>video {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30vw;
+        height: 100%;
+
+    }
+
+    .card>img {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28vw;
+        /* object-fit: cover; */
+
+        height: 100%;
+
+    }
+
+    .samagam-p {
+        text-align: center;
+        margin-bottom: 0.8vw;
+        font-weight: bold;
+        font-size: 1.1vw;
+        /* color: white; */
+        animation: blink 2s infinite;
+
+    }
+
+    .samagam-p-copy {
+        text-align: center;
+        /* margin: 0.8vw; */
+        font-weight: bold;
+        font-size: 1.1vw;
+        /* color: white; */
+        /* animation: blink 2s infinite; */
+
+    }
+
+    .samagam-link {
+        text-align: center;
+        font-weight: bold;
+
+        /* color: white; */
+        /* animation: blink 2s infinite; */
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .star {
+        width: 1.8vw;
+    }
+</style>
+
+<body>
+
+
+    <div class="headerContainer">
+        <img src="logo.png" alt="">
+        <div style="text-align: center;">
+            <h1 style="color: white; font-size: 3.6em;">Glorious 61 Years of Excellence</h1>
+            <h2>KVS Web Portals at a Glance</h2>
+        </div>
+        <img src="pmshri.png" alt="">
+
+    </div>
+
+
+
+    <div class="listOfCards">
+
+        <div style="width: 22vw" onclick="openLink('https://www.youtube.com/@KVS_PMeVIDYA/videos')" class="card">
+            <!-- <video muted loop autoplay >
+                <source src="evidya.mp4" type="video/mp4">
+            </video> -->
+            <iframe style="width: 28vw; height: 90%;" src="https://www.youtube.com/embed/iW5fTZDdZgE?"
+                title="KVS PM e-Vidya Live Stream" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="textContainer">
+                <h5>KVS PM e-Vidya Channel</h5>
+            </div>
+
+        </div>
+
+        <!-- SAMAGAM PORTAL TO BE LAUNCHED ON THE OCCASION OF 62nd FOUNDATION DAY (15-12-2024) 
+        () -->
+        <div onclick="openLink('https://app.kvs.gov.in/')" class="card" style="max-width: 22vw; color:blueviolet;">
+            <!-- <img src="lib1.png" alt=""> -->
+            <p class="samagam-p-copy">SAMAGAM PORTAL</p>
+            <p class="samagam-p">"TO BE LAUNCHED ON THE OCCASION OF 62nd <br> KVS FOUNDATION DAY"
+                <br><img src="star.png" class="star" /> <img src="star.png" class="star" /> (15-12-2024) <img
+                    src="star.png" class="star" /><img src="star.png" class="star" />
+            </p>
+            <p class="samagam-link">(https://app.kvs.gov.in/)</p>
+            <div class="textContainer">
+                <!-- <h5>KVS Samagam Portal</h5> -->
+            </div>
+
+        </div>
+        <div onclick="openLink('https://www.taralit.com/')" class="card">
+            <img src="tara.jpeg" alt="">
+            <div class="textContainer">
+                <h5>TARA App</h5>
+            </div>
+
+        </div>
+
+        <div onclick="openLink('https://kvsgis.nic.in/gis/')" class="card">
+            <img src="gis.jpeg" alt="">
+            <div class="textContainer">
+                <h5>KVS GIS Portal</h5>
+            </div>
+
+        </div>
+        <div onclick="openLink('https://epay.unionbankofindia.co.in/kvsfcs/kvlogin.aspx')" class="card">
+            <video muted loop autoplay>
+                <source src="salary.mp4" type="video/mp4">
+            </video>
+            <div class="textContainer">
+                <h5>Online Student Fee Portal</h5>
+            </div>
+
+        </div>
+        <div onclick="openLink('https://epay.unionbankofindia.co.in/kvfms/GUIs/Login.aSPX')" class="card">
+            <img src="salary.png" alt="">
+
+            <div class="textContainer">
+                <h5>Online Salary Portal</h5>
+            </div>
+
+        </div>
+
+
+
+        <div onclick="openLink('https://sports.kvsindia.in/')" class="card">
+            <video muted loop autoplay>
+                <source src="sports.mp4" type="video/mp4">
+            </video>
+            <div class="textContainer">
+                <h5>KVS Sports Portal</h5>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <!-- <div onclick="openLink('https://pis.kvs.gov.in/')" class="card">
+            <img src="pims.jpeg"></img>
+            <div class="textContainer">
+                <h5>PIMS Portal</h5>
+            </div>
+
+        </div> -->
+
+
+        <!-- <div style="width: 22vw" onclick="openLink('https://www.youtube.com/@KVS_PMeVIDYA/videos')" class="card"> -->
+        <!-- <video muted loop autoplay >
+                <source src="evidya.mp4" type="video/mp4">
+            </video> -->
+        <!-- <iframe style="width: 100%;" src="https://www.youtube.com/embed/sxzR5CFzI8s" title="KVS PM e-Vidya Live Stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="textContainer">
+                <h5>KVS PM e-Vidya Channel</h5>
+            </div>
+
+        </div> -->
+
+
+
+
+
+        <!-- <div onclick="openLink('https://sports.kvsindia.in/')" class="card">
+            <video muted loop autoplay >
+                <source src="sports.mp4" type="video/mp4">
+            </video>
+            <div class="textContainer">
+                <h5>KVS Sports Portal</h5>
+            </div>
+
+        </div> -->
+
+        <!-- <div onclick="openLink('https://libkvd5s1.blogspot.com/2023/11/2023.html')" class="card">
+            <video muted loop autoplay >
+                <source src="lib.mp4" type="video/mp4">
+            </video>
+            <div class="textContainer">
+                <h5>E-Library Blog</h5>
+            </div>
+
+        </div> -->
+
+
+
+
+
+
+
+
+
+        <!-- 
+        <div onclick="openLink('https://kvsangathan.nic.in/')" class="card">
+            <video muted loop autoplay >
+                <source src="sang.mp4" type="video/mp4">
+            </video>
+            <div class="textContainer">
+                <h5>KV Sangathan Website</h5>
+            </div>
+
+        </div>
+
+        <div  onclick="openLink('https://roernakulam.kvs.gov.in/')" class="card">
+            <video muted autoplay loop  >
+                <source src="ro.mp4" type="video/mp4">
+            </video>
+            <div class="textContainer">
+                <h5>Regional Office Website</h5>
+            </div>
+
+        </div> -->
+
+        <div onclick="openLink('https://kvsonlinetransfer.kvs.gov.in/#/')" class="card">
+            <video muted loop autoplay>
+                <source src="emp.mp4" type="video/mp4">
+            </video>
+            <div class="textContainer">
+                <h5>Online Transfer Portal</h5>
+            </div>
+
+        </div>
+        <div onclick="openLink('https://kvsonlineadmission.kvs.gov.in/index.html')" class="card">
+            <img src="ola.jpeg" alt="">
+            <div class="textContainer">
+                <h5>Online Admission</h5>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+
+
+
+        function openLink(href) {
+            window.open(href)
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
